@@ -33,6 +33,6 @@ def strip_tags(d):
         except html_parser.HTMLParseError:
             return d.decode('unicode-escape')
         else:
-            return s.get_data().decode('unicode-escape')
+            return s.get_data().encode('utf-8')
 
     return d
